@@ -1,0 +1,61 @@
+* {
+    transition: all 0.5s;
+}
+
+#tablero {
+    width: max-content;
+    height: max-content;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.card-container {
+    margin: 7px;
+}
+.card-container, .front {
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    width: calc(70vw / 6);;
+    height: calc(70vh / 4);
+    min-width: 100px;
+}
+.cards {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 3s;
+}
+
+.front {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.front img {
+    height: 90%;
+    width: auto;
+}
+
+.back {
+    background: linear-gradient(blue, darkblue);
+    transform: rotateY(180deg);
+}
+.card-back {
+    background: linear-gradient(red, darkred);
+}
+
+@keyframes rotate {
+    20%, 90% {
+        transform: rotateY(180deg);
+    }
+
+    0%, 100% {
+        transform: rotateY(0deg);
+    }
+}
