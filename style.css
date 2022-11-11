@@ -25,7 +25,7 @@
 .cards {
     position: relative;
     transform-style: preserve-3d;
-    animation: rotate 3s;
+    animation: rotate 5s;
 }
 
 .front {
@@ -47,7 +47,7 @@
     transform: rotateY(180deg);
 }
 .card-back {
-    background: linear-gradient(red, darkred);
+    background: linear-gradient(gray, darkgray);
 }
 
 @keyframes rotate {

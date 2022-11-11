@@ -94,7 +94,7 @@ function deselect(cardsSelected){
             if(pairs == 8){
                 tablero.innerHTML = `
                     <div class="text-center">
-                        <h3>Juego terminado!</h3>
+                        <h3>Juego terminado, Felicidades!!!</h3>
                         <h5>Gracias por jugar</h5>
                         <p>Intentos realizados: <span class="text-muted fw-bold">${tries}</span></p>
                     </div>
@@ -104,3 +104,4 @@ function deselect(cardsSelected){
         }
     }, 1000);
 }
+
